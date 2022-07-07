@@ -4,6 +4,11 @@ package main.kotlin.one.digitalinnovation.digitalonebank
 class Pessoa {
     var nome: String = "Josefino"
     var cpf: String = "032.878.254-12"
+    private set
+
+    constructor()
+
+    fun pessoaInfo() = "$nome + $cpf"
 
     inner class Endereco {
         var rua:String = "Rua teste"
@@ -13,8 +18,6 @@ class Pessoa {
 
 fun main() {
     val josefino = Pessoa()
+    println(josefino.pessoaInfo())
 
-    println(josefino.nome)
-    println(josefino.cpf)
-    println(josefino.Endereco().rua)
 }
